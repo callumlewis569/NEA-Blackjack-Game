@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+}
+
+#top-cover {
+  width: 100vw;
+  height: 20px;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+}
+
+#left-cover {
+  width: 50px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  border-radius: 3px;
+  transition: top 0.8s ease-in-out, right 0.8s ease-in-out;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+
+.flip-card-front {
+  background-color: #f3f3ec;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img,
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  padding: 20px;
+}
+
+#board {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#board-inner-container {
+  position: relative;
+}
+
+#shoe {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+
+#deck {
+  position: relative;
+  width: 100px;
+  height: 180px;
+}
+
+.flip-card {
+  position: absolute;
+  border-radius: 3px;
+}
+
+.shoe:nth-of-type(1) {
+  top: 50px;
+  right: 50px;
+  z-index: 10;
+}
+
+.shoe:nth-of-type(2) {
+  top: 60px;
+  right: 50px;
+  z-index: 11;
+}
+
+.shoe:nth-of-type(3) {
+  top: 70px;
+  right: 50px;
+  z-index: 12;
+}
+
+.shoe:nth-of-type(4) {
+  top: 80px;
+  right: 50px;
+  z-index: 13;
+}
+
+button {
+  font-size: 12px;
+  text-align: center;
+
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#deal,
+#hit,
+#reset {
+  top: 46px;
+  left: 46px;
+}
+
+#stand {
+  top: 27px;
+  left: 168px;
+}
+
+#double-down {
+  top: 116px;
+  left: 116px;
+}
+
+#split {
+  top: 168px;
+  left: 27px;
+}
+
+.hidden {
+  display: none;
+}
+
+#current-player {
+  position: absolute;
+  top: 300px;
+  right: 735px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid white;
+}

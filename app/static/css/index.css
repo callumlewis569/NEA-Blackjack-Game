@@ -1,0 +1,23 @@
+html {
+  background-color: green;
+}
+
+body {
+    margin: 0;
+}
+
+#main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+button {
+    width: 200px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
